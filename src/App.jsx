@@ -5,6 +5,7 @@ import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import { IoMdAddCircle } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import Header from "./Header";
 
 
 function App() {
@@ -29,9 +30,9 @@ axios.get('http://localhost:3000/user')
   }
 
   return (
-    <>
-  
-
+<div>
+<Header></Header>
+  <div  className="m-10">
       {data.map((photo) => (
 
       
@@ -61,12 +62,15 @@ mt-5 text-white rounded-lg flex  justify-between gap-5">
 
 </div>
       ))}
-    </>
+    </div>
 
 
 
 
 
+
+</div>
+ 
   )
 }
 
